@@ -1,8 +1,10 @@
-/* \author Aaron Brown */
 // Quiz on implementing simple RANSAC line fitting
 
 #include "../../render/render.h"
 #include <unordered_set>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
 #include "../../processPointClouds.h"
 // using templates for processPointClouds so also include .cpp to help linker
 #include "../../processPointClouds.cpp"
@@ -64,12 +66,49 @@ pcl::visualization::PCLVisualizer::Ptr initScene()
 std::unordered_set<int> Ransac(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, int maxIterations, float distanceTol)
 {
 	std::unordered_set<int> inliersResult;
+	std::unordered_set<int> temp;
 	srand(time(NULL));
 	
-	// TODO: Fill in this function
-
 	// For max iterations 
+	for (int i=0; i < maxIterations; i++)
+	{
+		cout << "Iter No: " << i <<endl;
+		int firstpoint_line = rand() % cloud->width;
+		cout << "First Point Index: " << firstpoint_line << endl; 
+		int secondpoint_line = rand() % cloud->width;
+		cout << "Second Point Index: " << secondpoint_line << endl;
 
+		float x1= cloud->points[firstpoint_line].x;
+		float x2= cloud->points[secondpoint_line].x;
+
+		float y1= cloud->points[firstpoint_line].y;
+		float y2= cloud->points[secondpoint_line].y;
+
+		float A_coeff=(y2 -y1);
+		float B_coeff=(x2 -x1);
+		float C_coeff=(x1*y2 -y1*x2);
+
+		for (int j=0; j < cloud->width; j++)
+		{
+			float X= cloud->points[j].x;
+			float Y= cloud->points[j].y;
+			
+			float d= abs(A_coeff*X + B_coeff*Y+C_coeff)/sqrt(pow(A_coeff,2)+pow(B_coeff,2));
+			cout << "Distance:" << d <<endl;
+			 if (d< distanceTol){
+				temp.insert(j);
+				cout << "Temp size: " << temp.size() << endl;
+			 }
+
+		}
+		if (temp.size()> inliersResult.size()){
+			inliersResult.clear();
+			inliersResult.insert(temp.begin(), temp.end());
+			cout << "Inliers size: " << inliersResult.size() << endl;
+
+		}
+		temp.clear();
+	}
 	// Randomly sample subset and fit line
 
 	// Measure distance between every point and fitted line
@@ -92,8 +131,8 @@ int main ()
 	
 
 	// TODO: Change the max iteration and distance tolerance arguments for Ransac function
-	std::unordered_set<int> inliers = Ransac(cloud, 0, 0);
-
+	std::unordered_set<int> inliers = Ransac(cloud, 10, 2);
+	cout << "Finally total indices: " << inliers.size() << endl;
 	pcl::PointCloud<pcl::PointXYZ>::Ptr  cloudInliers(new pcl::PointCloud<pcl::PointXYZ>());
 	pcl::PointCloud<pcl::PointXYZ>::Ptr cloudOutliers(new pcl::PointCloud<pcl::PointXYZ>());
 

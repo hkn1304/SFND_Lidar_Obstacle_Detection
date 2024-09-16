@@ -1,6 +1,4 @@
-/* \author Aaron Brown */
-// Create simple 3d highway enviroment using PCL
-// for exploring self-driving car sensors
+// Create simple 3d highway enviroment using PCL for exploring self-driving car sensors
 
 #include "sensors/lidar.h"
 #include "render/render.h"
@@ -42,13 +40,38 @@ void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer)
     // ----------------------------------------------------
     
     // RENDER OPTIONS
-    bool renderScene = true;
+    bool renderScene = false;
     std::vector<Car> cars = initHighway(renderScene, viewer);
     
-    // TODO:: Create lidar sensor 
+    // Create lidar sensor 
+    Lidar *ldr = new Lidar(cars,0.0);
+    //renderRays(viewer, ldr->position, ldr->scan());
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = ldr->scan();
+    //renderPointCloud(viewer, ldr->scan(), "hkn");
+    // Create point processor
+    ProcessPointClouds<pcl::PointXYZ> *pointProcessor(new ProcessPointClouds<pcl::PointXYZ>);
 
-    // TODO:: Create point processor
-  
+    pcl::PointCloud<pcl::PointXYZ>::Ptr road(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr object(new pcl::PointCloud<pcl::PointXYZ>);
+
+    std::pair<pcl::PointCloud<pcl::PointXYZ>::Ptr, pcl::PointCloud<pcl::PointXYZ>::Ptr> result = SegmentPlane<pcl::PointXYZ>(cloud, 100, 0.2);
+
+    road = result.first;
+    renderPointCloud(viewer, road, "road", Color(1,0,0));
+    object = result.second;
+    renderPointCloud(viewer, object, "object", Color(0,1,0));
+
+    std::vector<pcl::PointCloud<pcl::PointXYZ>::Ptr> cloudClusters = pointProcessor->Clustering(object, 1.0, 3, 30);
+    int clusterId= 0;
+
+    std::vector<Color> colors = {Color(1,0,0), Color(0,1,0), Color(0,0,1)};
+    for (pcl::PointCloud<pcl::PointXYZ>::Ptr cluster : cloudClusters){
+        cout << "cluster size: ";
+        pointProcessor->numPoints(cluster);
+        renderPointCloud(viewer, cluster, "objCloud"+std::to_string(clusterId), colors[clusterId]);
+        ++clusterId;
+    }
+
 }
 
 
@@ -89,4 +112,5 @@ int main (int argc, char** argv)
     {
         viewer->spinOnce ();
     } 
+    cout << "Simlaute";
 }

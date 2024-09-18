@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/hkn/anaconda3/lib/libboost_date_time.so.1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.74.0"
 		},
 		{
 			"name" : "Boost_DIR",
@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/Boost-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0"
 		},
 		{
 			"name" : "Boost_FILESYSTEM_LIBRARY_RELEASE",
@@ -39,7 +39,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/hkn/anaconda3/lib/libboost_filesystem.so.1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0"
 		},
 		{
 			"name" : "Boost_INCLUDE_DIR",
@@ -51,7 +51,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/include"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "Boost_IOSTREAMS_LIBRARY_RELEASE",
@@ -63,7 +63,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/hkn/anaconda3/lib/libboost_iostreams.so.1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.74.0"
 		},
 		{
 			"name" : "Boost_SERIALIZATION_LIBRARY_RELEASE",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/hkn/anaconda3/lib/libboost_serialization.so.1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.74.0"
 		},
 		{
 			"name" : "Boost_SYSTEM_LIBRARY_RELEASE",
@@ -87,7 +87,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "/home/hkn/anaconda3/lib/libboost_system.so.1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -506,6 +506,18 @@
 			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/bin/cmake-gui"
+		},
+		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
 			"properties" : 
 			[
@@ -601,6 +613,10 @@
 			"name" : "CMAKE_EXPORT_COMPILE_COMMANDS",
 			"properties" : 
 			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
 				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
@@ -1363,7 +1379,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/home/hkn/anaconda3/lib/cmake/Boost-1.82.0/BoostConfig.cmake][cfound components: system filesystem date_time iostreams serialization ][v1.82.0(1.65.0)]"
+			"value" : "[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: system filesystem date_time iostreams serialization ][v1.74.0(1.65.0)]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_EXPAT",
@@ -1387,7 +1403,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/include/eigen3][v(3.1)]"
+			"value" : "[/usr/include/eigen3][v(3.3)]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Eigen3",
@@ -1555,7 +1571,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL][/usr/include/pcl-1.12;/usr/include/eigen3;/home/hkn/anaconda3/include;/usr/include/ni;/usr/include/openni2;/usr/include][v(1.11)]"
+			"value" : "[pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::RenderingContextOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL][/usr/local/include/pcl-1.13;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/openni2][v(1.13)]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_2D",
@@ -1567,19 +1583,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/include/pcl-1.12][v()]"
-		},
-		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_APPS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding PCL_APPS"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_apps.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_COMMON",
@@ -1591,7 +1595,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_common.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_common.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_FEATURES",
@@ -1603,7 +1607,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_features.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_features.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_FILTERS",
@@ -1615,7 +1619,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_filters.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_filters.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_GEOMETRY",
@@ -1627,19 +1631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/include/pcl-1.12][v()]"
-		},
-		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_IN_HAND_SCANNER",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding PCL_IN_HAND_SCANNER"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_IO",
@@ -1651,7 +1643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_io.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_io.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_KDTREE",
@@ -1663,7 +1655,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_kdtree.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_kdtree.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_KEYPOINTS",
@@ -1675,7 +1667,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_keypoints.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_keypoints.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_ML",
@@ -1687,19 +1679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_ml.so][/usr/include/pcl-1.12][v()]"
-		},
-		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_MODELER",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding PCL_MODELER"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_ml.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_OCTREE",
@@ -1711,7 +1691,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_octree.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_octree.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_OUTOFCORE",
@@ -1723,7 +1703,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_outofcore.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_outofcore.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_PEOPLE",
@@ -1735,19 +1715,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_people.so][/usr/include/pcl-1.12][v()]"
-		},
-		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_POINT_CLOUD_EDITOR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding PCL_POINT_CLOUD_EDITOR"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_people.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_RECOGNITION",
@@ -1759,7 +1727,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_recognition.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_recognition.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_REGISTRATION",
@@ -1771,7 +1739,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_registration.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_registration.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_SAMPLE_CONSENSUS",
@@ -1783,7 +1751,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_sample_consensus.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEARCH",
@@ -1795,7 +1763,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_search.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_search.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEGMENTATION",
@@ -1807,7 +1775,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_segmentation.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_segmentation.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_STEREO",
@@ -1819,7 +1787,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_stereo.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_stereo.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_SURFACE",
@@ -1831,7 +1799,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_surface.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_surface.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_TRACKING",
@@ -1843,7 +1811,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_tracking.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_tracking.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION",
@@ -1855,7 +1823,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/lib/x86_64-linux-gnu/libpcl_visualization.so][/usr/include/pcl-1.12][v()]"
+			"value" : "[/usr/local/lib/libpcl_visualization.so][/usr/local/include/pcl-1.13][v()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PNG",
@@ -2855,7 +2823,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_2D_INCLUDE_DIRS",
@@ -2874,70 +2842,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "PCL_APPS_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "path to apps headers"
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
-		},
-		{
-			"name" : "PCL_APPS_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
-			"name" : "PCL_APPS_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "path to pcl_apps library"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_apps.so"
-		},
-		{
-			"name" : "PCL_APPS_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "path to pcl_apps library debug"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_apps.so"
-		},
-		{
 			"name" : "PCL_COMMON_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -2951,7 +2855,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_COMMON_INCLUDE_DIRS",
@@ -2983,7 +2887,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_common.so"
+			"value" : "/usr/local/lib/libpcl_common.so"
 		},
 		{
 			"name" : "PCL_COMMON_LIBRARY_DEBUG",
@@ -2999,7 +2903,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_common.so"
+			"value" : "/usr/local/lib/libpcl_common.so"
 		},
 		{
 			"name" : "PCL_DIR",
@@ -3011,7 +2915,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/cmake/pcl"
+			"value" : "/usr/local/share/pcl-1.13"
 		},
 		{
 			"name" : "PCL_FEATURES_INCLUDE_DIR",
@@ -3027,7 +2931,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_FEATURES_INCLUDE_DIRS",
@@ -3059,7 +2963,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_features.so"
+			"value" : "/usr/local/lib/libpcl_features.so"
 		},
 		{
 			"name" : "PCL_FEATURES_LIBRARY_DEBUG",
@@ -3075,7 +2979,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_features.so"
+			"value" : "/usr/local/lib/libpcl_features.so"
 		},
 		{
 			"name" : "PCL_FILTERS_INCLUDE_DIR",
@@ -3091,7 +2995,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_FILTERS_INCLUDE_DIRS",
@@ -3123,7 +3027,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_filters.so"
+			"value" : "/usr/local/lib/libpcl_filters.so"
 		},
 		{
 			"name" : "PCL_FILTERS_LIBRARY_DEBUG",
@@ -3139,7 +3043,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_filters.so"
+			"value" : "/usr/local/lib/libpcl_filters.so"
 		},
 		{
 			"name" : "PCL_GEOMETRY_INCLUDE_DIR",
@@ -3155,7 +3059,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_GEOMETRY_INCLUDE_DIRS",
@@ -3190,38 +3094,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "PCL_IN_HAND_SCANNER_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "path to in_hand_scanner headers"
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
-		},
-		{
-			"name" : "PCL_IN_HAND_SCANNER_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
 			"name" : "PCL_IO_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -3235,7 +3107,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_IO_INCLUDE_DIRS",
@@ -3267,7 +3139,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_io.so"
+			"value" : "/usr/local/lib/libpcl_io.so"
 		},
 		{
 			"name" : "PCL_IO_LIBRARY_DEBUG",
@@ -3283,7 +3155,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_io.so"
+			"value" : "/usr/local/lib/libpcl_io.so"
 		},
 		{
 			"name" : "PCL_KDTREE_INCLUDE_DIR",
@@ -3299,7 +3171,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_KDTREE_INCLUDE_DIRS",
@@ -3331,7 +3203,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_kdtree.so"
+			"value" : "/usr/local/lib/libpcl_kdtree.so"
 		},
 		{
 			"name" : "PCL_KDTREE_LIBRARY_DEBUG",
@@ -3347,7 +3219,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_kdtree.so"
+			"value" : "/usr/local/lib/libpcl_kdtree.so"
 		},
 		{
 			"name" : "PCL_KEYPOINTS_INCLUDE_DIR",
@@ -3363,7 +3235,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_KEYPOINTS_INCLUDE_DIRS",
@@ -3395,7 +3267,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_keypoints.so"
+			"value" : "/usr/local/lib/libpcl_keypoints.so"
 		},
 		{
 			"name" : "PCL_KEYPOINTS_LIBRARY_DEBUG",
@@ -3411,7 +3283,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_keypoints.so"
+			"value" : "/usr/local/lib/libpcl_keypoints.so"
 		},
 		{
 			"name" : "PCL_LIBRARIES",
@@ -3459,7 +3331,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_ML_INCLUDE_DIRS",
@@ -3491,7 +3363,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_ml.so"
+			"value" : "/usr/local/lib/libpcl_ml.so"
 		},
 		{
 			"name" : "PCL_ML_LIBRARY_DEBUG",
@@ -3507,39 +3379,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_ml.so"
-		},
-		{
-			"name" : "PCL_MODELER_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "path to modeler headers"
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
-		},
-		{
-			"name" : "PCL_MODELER_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
+			"value" : "/usr/local/lib/libpcl_ml.so"
 		},
 		{
 			"name" : "PCL_OCTREE_INCLUDE_DIR",
@@ -3555,7 +3395,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_OCTREE_INCLUDE_DIRS",
@@ -3587,7 +3427,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_octree.so"
+			"value" : "/usr/local/lib/libpcl_octree.so"
 		},
 		{
 			"name" : "PCL_OCTREE_LIBRARY_DEBUG",
@@ -3603,7 +3443,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_octree.so"
+			"value" : "/usr/local/lib/libpcl_octree.so"
 		},
 		{
 			"name" : "PCL_OUTOFCORE_INCLUDE_DIR",
@@ -3619,7 +3459,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_OUTOFCORE_INCLUDE_DIRS",
@@ -3651,7 +3491,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_outofcore.so"
+			"value" : "/usr/local/lib/libpcl_outofcore.so"
 		},
 		{
 			"name" : "PCL_OUTOFCORE_LIBRARY_DEBUG",
@@ -3667,7 +3507,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_outofcore.so"
+			"value" : "/usr/local/lib/libpcl_outofcore.so"
 		},
 		{
 			"name" : "PCL_PEOPLE_INCLUDE_DIR",
@@ -3683,7 +3523,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_PEOPLE_INCLUDE_DIRS",
@@ -3715,7 +3555,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_people.so"
+			"value" : "/usr/local/lib/libpcl_people.so"
 		},
 		{
 			"name" : "PCL_PEOPLE_LIBRARY_DEBUG",
@@ -3731,39 +3571,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_people.so"
-		},
-		{
-			"name" : "PCL_POINT_CLOUD_EDITOR_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "path to point_cloud_editor headers"
-				}
-			],
-			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
-		},
-		{
-			"name" : "PCL_POINT_CLOUD_EDITOR_INCLUDE_DIRS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
+			"value" : "/usr/local/lib/libpcl_people.so"
 		},
 		{
 			"name" : "PCL_RECOGNITION_INCLUDE_DIR",
@@ -3779,7 +3587,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_RECOGNITION_INCLUDE_DIRS",
@@ -3811,7 +3619,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_recognition.so"
+			"value" : "/usr/local/lib/libpcl_recognition.so"
 		},
 		{
 			"name" : "PCL_RECOGNITION_LIBRARY_DEBUG",
@@ -3827,7 +3635,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_recognition.so"
+			"value" : "/usr/local/lib/libpcl_recognition.so"
 		},
 		{
 			"name" : "PCL_REGISTRATION_INCLUDE_DIR",
@@ -3843,7 +3651,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_REGISTRATION_INCLUDE_DIRS",
@@ -3875,7 +3683,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_registration.so"
+			"value" : "/usr/local/lib/libpcl_registration.so"
 		},
 		{
 			"name" : "PCL_REGISTRATION_LIBRARY_DEBUG",
@@ -3891,7 +3699,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_registration.so"
+			"value" : "/usr/local/lib/libpcl_registration.so"
 		},
 		{
 			"name" : "PCL_SAMPLE_CONSENSUS_INCLUDE_DIR",
@@ -3907,7 +3715,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_SAMPLE_CONSENSUS_INCLUDE_DIRS",
@@ -3939,7 +3747,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so"
+			"value" : "/usr/local/lib/libpcl_sample_consensus.so"
 		},
 		{
 			"name" : "PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG",
@@ -3955,7 +3763,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so"
+			"value" : "/usr/local/lib/libpcl_sample_consensus.so"
 		},
 		{
 			"name" : "PCL_SEARCH_INCLUDE_DIR",
@@ -3971,7 +3779,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_SEARCH_INCLUDE_DIRS",
@@ -4003,7 +3811,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_search.so"
+			"value" : "/usr/local/lib/libpcl_search.so"
 		},
 		{
 			"name" : "PCL_SEARCH_LIBRARY_DEBUG",
@@ -4019,7 +3827,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_search.so"
+			"value" : "/usr/local/lib/libpcl_search.so"
 		},
 		{
 			"name" : "PCL_SEGMENTATION_INCLUDE_DIR",
@@ -4035,7 +3843,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_SEGMENTATION_INCLUDE_DIRS",
@@ -4067,7 +3875,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_segmentation.so"
+			"value" : "/usr/local/lib/libpcl_segmentation.so"
 		},
 		{
 			"name" : "PCL_SEGMENTATION_LIBRARY_DEBUG",
@@ -4083,7 +3891,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_segmentation.so"
+			"value" : "/usr/local/lib/libpcl_segmentation.so"
 		},
 		{
 			"name" : "PCL_STEREO_INCLUDE_DIR",
@@ -4099,7 +3907,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_STEREO_INCLUDE_DIRS",
@@ -4131,7 +3939,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_stereo.so"
+			"value" : "/usr/local/lib/libpcl_stereo.so"
 		},
 		{
 			"name" : "PCL_STEREO_LIBRARY_DEBUG",
@@ -4147,7 +3955,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_stereo.so"
+			"value" : "/usr/local/lib/libpcl_stereo.so"
 		},
 		{
 			"name" : "PCL_SURFACE_INCLUDE_DIR",
@@ -4163,7 +3971,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_SURFACE_INCLUDE_DIRS",
@@ -4195,7 +4003,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_surface.so"
+			"value" : "/usr/local/lib/libpcl_surface.so"
 		},
 		{
 			"name" : "PCL_SURFACE_LIBRARY_DEBUG",
@@ -4211,7 +4019,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_surface.so"
+			"value" : "/usr/local/lib/libpcl_surface.so"
 		},
 		{
 			"name" : "PCL_TRACKING_INCLUDE_DIR",
@@ -4227,7 +4035,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_TRACKING_INCLUDE_DIRS",
@@ -4259,7 +4067,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_tracking.so"
+			"value" : "/usr/local/lib/libpcl_tracking.so"
 		},
 		{
 			"name" : "PCL_TRACKING_LIBRARY_DEBUG",
@@ -4275,7 +4083,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_tracking.so"
+			"value" : "/usr/local/lib/libpcl_tracking.so"
 		},
 		{
 			"name" : "PCL_VISUALIZATION_INCLUDE_DIR",
@@ -4291,7 +4099,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/include/pcl-1.12"
+			"value" : "/usr/local/include/pcl-1.13"
 		},
 		{
 			"name" : "PCL_VISUALIZATION_INCLUDE_DIRS",
@@ -4323,7 +4131,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_visualization.so"
+			"value" : "/usr/local/lib/libpcl_visualization.so"
 		},
 		{
 			"name" : "PCL_VISUALIZATION_LIBRARY_DEBUG",
@@ -4339,7 +4147,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/lib/x86_64-linux-gnu/libpcl_visualization.so"
+			"value" : "/usr/local/lib/libpcl_visualization.so"
 		},
 		{
 			"name" : "PC_EIGEN_CFLAGS",
@@ -8994,22 +8802,6 @@
 			"value" : "1"
 		},
 		{
-			"name" : "boost_atomic_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for boost_atomic."
-				}
-			],
-			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_atomic-1.82.0"
-		},
-		{
 			"name" : "boost_date_time_DIR",
 			"properties" : 
 			[
@@ -9023,7 +8815,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_date_time-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.74.0"
 		},
 		{
 			"name" : "boost_filesystem_DIR",
@@ -9039,7 +8831,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_filesystem-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.74.0"
 		},
 		{
 			"name" : "boost_headers_DIR",
@@ -9055,7 +8847,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_headers-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0"
 		},
 		{
 			"name" : "boost_iostreams_DIR",
@@ -9071,7 +8863,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_iostreams-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/boost_iostreams-1.74.0"
 		},
 		{
 			"name" : "boost_serialization_DIR",
@@ -9087,7 +8879,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_serialization-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/boost_serialization-1.74.0"
 		},
 		{
 			"name" : "boost_system_DIR",
@@ -9103,7 +8895,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/hkn/anaconda3/lib/cmake/boost_system-1.82.0"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.74.0"
 		},
 		{
 			"name" : "double-conversion_INCLUDE_DIR",

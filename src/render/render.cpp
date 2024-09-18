@@ -48,6 +48,26 @@ void renderPointCloud(pcl::visualization::PCLVisualizer::Ptr& viewer, const pcl:
   	viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_COLOR, color.r, color.g, color.b, name);
 }
 
+void renderPointCloud(pcl::visualization::PCLVisualizer::Ptr& viewer, const pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr& cloud, std::string name) {
+    viewer->addPointCloud<pcl::PointXYZRGBNormal>(cloud, name);
+    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 4, name);
+}	
+
+void renderPointCloud(pcl::visualization::PCLVisualizer::Ptr& viewer, const pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr& cloud, std::string name, Color color) {
+    if (color.r == -1) {
+        // Use the RGB color information in the PointXYZRGBNormal structure
+        pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGBNormal> rgb(cloud);
+        viewer->addPointCloud<pcl::PointXYZRGBNormal>(cloud, rgb, name);
+    } else {
+        // Use the specified color for all points
+        viewer->addPointCloud<pcl::PointXYZRGBNormal>(cloud, name);
+        viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_COLOR, color.r, color.g, color.b, name);
+    }
+
+    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, name);
+}
+
+
 void renderPointCloud(pcl::visualization::PCLVisualizer::Ptr& viewer, const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud, std::string name, Color color)
 {
 

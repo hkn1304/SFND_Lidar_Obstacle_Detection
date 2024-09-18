@@ -120,6 +120,72 @@ std::unordered_set<int> Ransac(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, int ma
 
 }
 
+std::unordered_set<int> RansacPlane(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, int maxIterations, float distanceTol)
+{
+	std::unordered_set<int> inliersResult;
+	std::unordered_set<int> temp;
+	srand(time(NULL));
+	
+	// For max iterations 
+	for (int i=0; i < maxIterations; i++)
+	{
+		cout << "Iter No: " << i <<endl;
+		int firstpoint_line = rand() % cloud->width;
+		cout << "First Point Index: " << firstpoint_line << endl; 
+		int secondpoint_line = rand() % cloud->width;
+		cout << "Second Point Index: " << secondpoint_line << endl;
+		int thirdpoint_line = rand() % cloud->width;
+		cout << "Third Point Index: " << thirdpoint_line << endl;
+
+		float x1= cloud->points[firstpoint_line].x;
+		float x2= cloud->points[secondpoint_line].x;
+		float x3= cloud->points[thirdpoint_line].x;
+
+		float y1= cloud->points[firstpoint_line].y;
+		float y2= cloud->points[secondpoint_line].y;
+		float y3= cloud->points[thirdpoint_line].y;
+
+		float z1= cloud->points[firstpoint_line].z;
+		float z2= cloud->points[secondpoint_line].z;
+		float z3= cloud->points[thirdpoint_line].z;
+
+		auto cross_prod = [&] () -> std::array<float,3>
+		{
+			return { (y2-y1)*(z3-z1)-(z2-z1)*(y3-y1),
+					 (z2-z1)*(x3-x1)-(x2-x1)*(z3-z1),
+					 (x2-x1)*(y3-y1)-(y2-y1)*(x3-x1)};
+		};
+
+		float A_coeff=cross_prod()[0];
+		float B_coeff=cross_prod()[1];
+		float C_coeff=cross_prod()[2];
+
+
+		for (int j=0; j < cloud->width; j++)
+		{
+			float X= cloud->points[j].x;
+			float Y= cloud->points[j].y;
+			float Z= cloud->points[j].z;
+			float D_coeff=-(A_coeff*X+B_coeff*Y+C_coeff*Z);
+			
+			float d= abs(A_coeff*X + B_coeff*Y+C_coeff*Z+D_coeff)/sqrt(pow(A_coeff,2)+pow(B_coeff,2)+pow(C_coeff,2));
+			cout << "Distance:" << d <<endl;
+			 if (d< distanceTol){
+				temp.insert(j);
+				cout << "Temp size: " << temp.size() << endl;
+			 }
+
+		}
+		if (temp.size()> inliersResult.size()){
+			inliersResult.clear();
+			inliersResult.insert(temp.begin(), temp.end());
+			cout << "Inliers size: " << inliersResult.size() << endl;
+		}
+		temp.clear();
+	}	
+	return inliersResult;
+}
+
 int main ()
 {
 

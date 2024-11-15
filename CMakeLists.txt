@@ -7,7 +7,8 @@ set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 project(playback)
 
-find_package(PCL 1.11 REQUIRED)
+#find_package(PCL 1.11 REQUIRED)
+find_package(PCL 1.13 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})

@@ -75,6 +75,7 @@ struct KdTree
             searchHelper(target, node->left, depth + 1, distanceTol, ids);
         }
 
+
         if ((depth % 3 == 0 && (target.x + distanceTol) > node->point.x) || 
             (depth % 3 == 1 && (target.y + distanceTol) > node->point.y) || 
             (depth % 3 == 2 && (target.z + distanceTol) > node->point.z)) {

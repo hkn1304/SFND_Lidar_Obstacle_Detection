@@ -182,7 +182,7 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::E
     pcl::VoxelGrid<PointT> vg;
     typename pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
     vg.setInputCloud (cloud);
-    vg.setLeafSize (0.5, 0.5, 0.5);
+    vg.setLeafSize (0.8, 0.8, 0.8);
     vg.filter (*cloud_filtered);
     std::cout << "PointCloud after filtering has: " << cloud_filtered->size ()  << " data points." << std::endl; //*
 

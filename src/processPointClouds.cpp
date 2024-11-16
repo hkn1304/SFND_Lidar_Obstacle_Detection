@@ -159,7 +159,7 @@ void ProcessPointClouds<PointT>::proximity(int indice, typename pcl::PointCloud<
 
         // Search for nearest neighbors in the KdTree using the point directly from the cloud
         std::vector<int> nearest = tree->search(searchPoint, distanceTol);
-        std::cout << "Nearest points found: " << nearest.size() << " for point index: " << indice << std::endl;
+        //std::cout << "Nearest points found: " << nearest.size() << " for point index: " << indice << std::endl;
 
         // Iterate through each nearest neighbor
         for (int id : nearest)
@@ -183,6 +183,7 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::E
     typename pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
     vg.setInputCloud (cloud);
     vg.setLeafSize (0.8, 0.8, 0.8);
+    //vg.setLeafSize (1.0, 1.0, 1.0);
     vg.filter (*cloud_filtered);
     std::cout << "PointCloud after filtering has: " << cloud_filtered->size ()  << " data points." << std::endl; //*
 
@@ -199,7 +200,7 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::E
 	std::vector<typename pcl::PointCloud<PointT>::Ptr>  clusters;
 
 	std::vector<bool> isprocessed(cloud_filtered->points.size(), false);
-    std::cout << cloud_filtered->points.size() << std::endl;
+    //std::cout << cloud_filtered->points.size() << std::endl;
 
 	int i = 0;
 	while (i < cloud_filtered->points.size())
@@ -213,7 +214,7 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::E
 		typename pcl::PointCloud<PointT>::Ptr cluster(new pcl::PointCloud<PointT>);
         std::vector<int> cluster_id;
 		proximity(i, cloud_filtered, cluster_id, isprocessed, tree, distanceTol);
-        std::cout << "Cluster ID Size: " << cluster_id.size() << std::endl;
+        //std::cout << "Cluster ID Size: " << cluster_id.size() << std::endl;
         if (cluster_id.size() < maxSize && cluster_id.size() > minSize) {
             for (int i : cluster_id) {
                 cluster->points.push_back(cloud_filtered->points[i]);

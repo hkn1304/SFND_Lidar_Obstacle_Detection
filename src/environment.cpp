@@ -37,28 +37,32 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
 
     Eigen::Vector4f minPoint(-10, -5, -2, 1.0);
     Eigen::Vector4f maxPoint(30, 8, 1, 1.0);
+
+    // Eigen::Vector4f minPoint(-20, -6, -3, 1.0);
+    // Eigen::Vector4f maxPoint(25, 6.5, 3, 1.0);
+
     pcl::PointCloud<pcl::PointXYZI>::Ptr filterCloud= pointProcessorI->FilterCloud(inputCloud, 0.3, minPoint, maxPoint );
   	renderPointCloud(viewer,filterCloud,"filterCloud");
 
-    std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> result = pointProcessorI->SegmentPlane(filterCloud, 10, 0.2, "Custom");
+    std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> result = pointProcessorI->SegmentPlane(filterCloud, 100, 0.2, "Custom");
 
     auto road = result.first;
     renderPointCloud(viewer, road, "road", Color(1,0,0));
     auto object = result.second;
     renderPointCloud(viewer, object, "object", Color(0,1,0));
 
-    std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessorI->EuclideanCluster(object, 0.9, 3, 50);
+    std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessorI->EuclideanCluster(object, 0.9, 2, 50);
     //std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessorI->Clustering(object, 1.0, 3, 30);
     int clusterId= 0;
 
-    std::vector<Color> colors = {Color(1,0,0), Color(0,1,0), Color(0,0,1), Color(1,0,1), Color(0,1,1), Color(1,1,0)};
+    std::vector<Color> colors = {Color(1.0,0.0,0.0), Color(0.0,1.0,0.0), Color(0.0,0.0,1.0), Color(1.0,0.0,1.0), Color(0.0,1.0,1.0), Color(1.0,1.0,0.0)};
     for (pcl::PointCloud<pcl::PointXYZI>::Ptr cluster : cloudClusters){
-        cout << "cluster size: ";
-        pointProcessorI->numPoints(cluster);
+        //cout << "cluster size: ";
+        //pointProcessorI->numPoints(cluster);
         renderPointCloud(viewer, cluster, "objCloud"+std::to_string(clusterId), colors[clusterId]);
         ++clusterId;
         Box box = pointProcessorI->BoundingBox(cluster);
-        renderBox(viewer, box, clusterId, Color(1,0,0), 1);
+        renderBox(viewer, box, clusterId, Color(0.0,0.0,1.0), 1);
     }
 
 }
